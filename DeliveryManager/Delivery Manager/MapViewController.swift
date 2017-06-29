@@ -12,7 +12,7 @@ import GoogleMaps
 
 
 class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var deliveryList: [DeliveryManagerObject] = [DeliveryManagerObject]()
+    private var deliveryList: [DeliveryManagerObject] = [DeliveryManagerObject]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +22,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Do any additional setup after loading the view.
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return deliveryList.count
