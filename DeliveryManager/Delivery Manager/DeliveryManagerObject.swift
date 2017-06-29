@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+
 public class DeliveryManagerObject: NSObject
 {
     struct JsonDeliveryKey{
