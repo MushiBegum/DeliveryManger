@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 import SwiftyJSON
 
+
 public class DeliveryManagerObject: NSObject
 {
     struct JsonDeliveryKey{
-        static let kPostcode = "0000"
+        static let kDelDesc = "DelDesc"
         static let kVbeln = "0000000000"
         static let kStreet = "Street"
         static let kCity = "City"
@@ -21,7 +22,7 @@ public class DeliveryManagerObject: NSObject
         static let kDate = "Date"
         static let kName = "Name"
     }
-    var postcode:String!
+    var deldesc:String!
     var vbeln:String!
     var street:String!
     var city:String!
@@ -38,9 +39,9 @@ public class DeliveryManagerObject: NSObject
         }
     
     
-        if let postcode =  json[JsonDeliveryKey.kPostcode ].string
+        if let deldesc =  json[JsonDeliveryKey.kDelDesc ].string
         {
-            self.postcode = postcode
+            self.deldesc = deldesc
         }
     
     

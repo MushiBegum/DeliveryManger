@@ -8,5 +8,7 @@ target 'Delivery Manager' do
   # Pods for Delivery Manager
 pod ‘SwiftyJSON’
 pod ‘GoogleMaps’
-
+pod 'GooglePlaces'
+pod 'Alamofire'
+pod 'MGSwipeTableCell'
 end
