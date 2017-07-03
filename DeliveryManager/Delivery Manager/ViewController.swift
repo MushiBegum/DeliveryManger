@@ -98,7 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordField.text = ""
     }
     
-    @IBAction func LoginButtonTapped(_ sender: AnyObject) {
+    @IBAction func LoginButtonPressed(_ sender: AnyObject) {
         fetchUsers()
     }
     func createAlert(title:String, message:String){

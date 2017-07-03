@@ -10,14 +10,15 @@ import UIKit
 import GoogleMaps
 class PinCodeViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var input: UILabel!
-
+   
+    
     @IBAction func Numbers(_ sender: UIButton) {
         label.text = label.text! + String(sender.tag-1)
+        
     }
     
     @IBAction func EnterButton(_ sender: AnyObject) {
-        if label.text == "1234" {
+        if label.text == "0000" {
             performSegue(withIdentifier: "signedIn", sender: self)
         }
     }
@@ -30,7 +31,7 @@ class PinCodeViewController: UIViewController {
     
     func resetLabel(){
         label.text = ""
-    }
+}
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,5 +42,6 @@ class PinCodeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    
+}
 }

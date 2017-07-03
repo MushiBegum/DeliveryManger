@@ -65,43 +65,26 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
     
     var selectedObj : DeliveryManagerObject!
     
+    
+    
+    
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         deliveryListArray = fetchDeliveryList()
         
         //Printing the data array
         for deliveryObj in deliveryListArray {
-            print(deliveryObj.kunnr)
-            print(deliveryObj.deldesc)
-            print(deliveryObj.date)
+            print(deliveryObj.DelNo)
+            print(deliveryObj.description)
+            print(deliveryObj.DelDate)
             
         }
         
-        func initializeVariables()
-        {
-            aMapView?.mapType = .normal
-            
-            locationManager.distanceFilter = kCLDistanceFilterNone;
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-            locationManager.startUpdatingLocation()
-        }
-
-        func renderAlltheMarkers()
-        {
-            getCamera()
-            
-            
-            aMapView.delegate = self
-            
-            for i in (0..<self.deliveryListArray.count)
-            {
-                let obj = self.deliveryListArray[i]
-                loadLocationFromAddressString(delivery: obj, selectmarker: false)
-                
-                
-            }
-        }
-
+        
         renderAlltheMarkers()
         locationManager.requestAlwaysAuthorization()
         
@@ -118,7 +101,40 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
         }
         
         initializeVariables()
+        tableView.reloadData()
     }
+    
+    // MARK: - Private Methods
+    
+    private func initializeVariables()
+    {
+        aMapView?.mapType = .normal
+        
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        locationManager.startUpdatingLocation()
+    }
+    
+    
+    
+    // MARK: - SHOW MARKERS
+    func renderAlltheMarkers()
+    {
+        getCamera()
+        
+        
+        aMapView?.delegate = self
+        
+        for i in (0..<self.deliveryListArray.count)
+        {
+            let obj = self.deliveryListArray[i]
+            loadLocationFromAddressString(delivery: obj, selectmarker: false)
+            
+            
+        }
+    }
+    
+    
         // MARK: - SHOW MARKERS
         
          func getCamera()
@@ -154,7 +170,7 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
         {
            
             
-            let esc_addr = delivery.deldesc.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            let esc_addr = delivery.DelDesc.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             
             let req = String(format: "http://maps.google.com/maps/api/geocode/json?sensor=false&address=%@", esc_addr!)
             
@@ -167,8 +183,8 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
                 
                 let marker = self.placeMarker(lat: CLLocationDegrees(lat!), lng: CLLocationDegrees(lon!))
                 
-                marker.title = delivery.name
-                marker.snippet = delivery.vbeln
+                marker.title = delivery.CustName
+                marker.snippet = delivery.DelNo
                 
                 if selectmarker == true
                 {
@@ -205,15 +221,15 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
     
     private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"customCell", for: indexPath ) as! CustomTableViewCell
-        deliveryList = fetchDeliveryList()
+//        deliveryList = fetchDeliveryList()
         let delivery = deliveryList[indexPath.row]
         
-        cell.CustomerName.text = delivery.name
-        cell.DeliveryNumber.text = delivery.vbeln
-        cell.DeliveryDate.text = delivery.date
+        cell.CustomerName.text = delivery.CustName
+        cell.DeliveryNumber.text = delivery.DelNo
+        cell.DeliveryDate.text = delivery.DelDate
         cell.Description.text = delivery.city
         cell.Description.text = delivery.street
-        cell.Description.text = delivery.kunnr
+        cell.Description.text = delivery.DelDesc
         
         return cell
     }

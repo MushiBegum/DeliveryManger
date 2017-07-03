@@ -13,67 +13,70 @@ import SwiftyJSON
 
 public class DeliveryManagerObject: NSObject
 {
-    struct JsonDeliveryKey{
+    struct apiKey
+    {
+        static let kDelNo = "Vbeln"
+        static let kDelDate = "Lfdat"
+        static let kCustName = "Name1"
         static let kDelDesc = "DelDesc"
-        static let kVbeln = "0000000000"
         static let kStreet = "Street"
-        static let kCity = "City"
-        static let kKunnr = "00"
-        static let kDate = "Date"
-        static let kName = "Name"
+        static let kCity = "City1"
+        static let kPin = "Kunnr"
     }
-    var deldesc:String!
-    var vbeln:String!
-    var street:String!
-    var city:String!
-    var kunnr:String!
-    var date:String!
-    var name:String!
-
-
+    
+    var DelNo : String!
+    var DelDate : String!
+    var CustName : String!
+    var DelDesc : String!
+    var street : String!
+    var city : String!
+    var pin : String!
+    
+    //    var lat : Float = -33.8688
+    //    var lng : Float = 151.2093
+    
     public init?(json: JSON?)
     {
         guard let json = json else
         {
             return nil
         }
-    
-    
-        if let deldesc =  json[JsonDeliveryKey.kDelDesc ].string
-        {
-            self.deldesc = deldesc
-        }
-    
-    
-        if let vbeln =  json[JsonDeliveryKey.kVbeln].string
-        {
-            self.vbeln = vbeln
-        }
         
-        if let street = json[JsonDeliveryKey.kStreet].string
+        if let DelNo =  json[apiKey.kDelNo].string
+        {
+            self.DelNo = DelNo
+        }
+        if let DelDate =  json[apiKey.kDelDate].string
+        {
+            let nDate = DelDate.components(separatedBy: "(")[1].components(separatedBy: ")")[0]
+            
+            let date = Date.init(timeIntervalSince1970: Double(nDate)! / 1000)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yy"
+            self.DelDate = formatter.string(from: date)
+        }
+        if let CustName =  json[apiKey.kCustName].string
+        {
+            self.CustName = CustName
+        }
+        if let street =  json[apiKey.kStreet].string
         {
             self.street = street
         }
-        
-        if let city =  json[JsonDeliveryKey.kCity].string
+        if let city =  json[apiKey.kCity].string
         {
             self.city = city
         }
-        
-        if let kunnr =  json[JsonDeliveryKey.kKunnr].string
+        if let pin =  json[apiKey.kPin].string
         {
-            self.kunnr = kunnr
+            self.pin = pin
         }
+        //        if let DelDesc =  json[apiKey.kDelDesc].string
+        //        {
+        self.DelDesc = self.street + ", " + self.city + " " + self.pin
+        //        }
         
-        if let date =  json[JsonDeliveryKey.kDate].string
-        {
-            self.date = date
-        }
-        
-        if let name =  json[JsonDeliveryKey.kName].string
-        {
-            self.name = name
-        }
+    }
     
     }
-}
+
