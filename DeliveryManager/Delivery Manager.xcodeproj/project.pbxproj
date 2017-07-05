@@ -19,6 +19,7 @@
 		1FFF75271EFF7FC5009FEDF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFF75251EFF7FC5009FEDF6 /* LaunchScreen.storyboard */; };
 		662B7ADA1F052C190052219C /* DeliveryList.json in Resources */ = {isa = PBXBuildFile; fileRef = 662B7AD91F052C190052219C /* DeliveryList.json */; };
 		662B7ADC1F052C590052219C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B7ADB1F052C590052219C /* LoginModel.swift */; };
+		66857DB41F0CE6A000C077CC /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66857DB31F0CE6A000C077CC /* OrderListViewController.swift */; };
 		F3A7CF200DD6047FC0560203 /* Pods_Delivery_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1952C893CAA66136629843 /* Pods_Delivery_Manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		1FFF75281EFF7FC5009FEDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		662B7AD91F052C190052219C /* DeliveryList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeliveryList.json; sourceTree = "<group>"; };
 		662B7ADB1F052C590052219C /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		66857DB31F0CE6A000C077CC /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		6C1952C893CAA66136629843 /* Pods_Delivery_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delivery_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D160A433CB4D3D4FF2A93C0 /* Pods-Delivery Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delivery Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delivery Manager/Pods-Delivery Manager.release.xcconfig"; sourceTree = "<group>"; };
 		A4AE48C7B35A42CC228510E9 /* Pods-Delivery Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delivery Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delivery Manager/Pods-Delivery Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				662B7AD91F052C190052219C /* DeliveryList.json */,
 				1F80D85F1F03AE600043DCF8 /* DeliveryManagerObject.swift */,
 				662B7ADB1F052C590052219C /* LoginModel.swift */,
+				66857DB31F0CE6A000C077CC /* OrderListViewController.swift */,
 			);
 			path = "Delivery Manager";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				1FFF751D1EFF7FC5009FEDF6 /* AppDelegate.swift in Sources */,
 				1F5241501EFFAEAE006C1FFB /* PinCodeViewController.swift in Sources */,
 				1F79EF3C1F03ED63004A2F05 /* MapViewController.swift in Sources */,
+				66857DB41F0CE6A000C077CC /* OrderListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
