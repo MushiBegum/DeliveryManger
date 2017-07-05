@@ -13,8 +13,6 @@ import SwiftyJSON
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var output: UILabel!
-    
     var userList: [LoginModel] = [LoginModel]()
     
     override func viewDidLoad() {
@@ -31,6 +29,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Print the data whether its rendering properly
         for user in userList {
             if user.userName == usernameField.text && user.password == passwordField.text {
+                 UserDefaults.standard.set(user.userName, forKey: "applicationConnectionID")
+                
                 performSegue(withIdentifier: "loggedIn", sender: self)
                 resetField()
             }
@@ -40,6 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
+        
+    }
+    private func saveAppLoginDetails(){
         
     }
     
@@ -101,12 +104,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginButtonPressed(_ sender: AnyObject) {
         fetchUsers()
     }
+    
     func createAlert(title:String, message:String){
         let alert = UIAlertController(title:title,message:message, preferredStyle:UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

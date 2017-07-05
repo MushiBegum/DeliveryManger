@@ -13,6 +13,7 @@ import GooglePlaces
 import CoreLocation
 import Alamofire
 
+
 enum GoogleResult<T>{
     case Success(T)
     case Error(GoogleError)
@@ -35,7 +36,7 @@ struct GoogleMapService
 
 
 
-class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelegate{
+class MapViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, GMSMapViewDelegate{
     private var deliveryList: [DeliveryManagerObject] = [DeliveryManagerObject]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -75,6 +76,9 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         deliveryListArray = fetchDeliveryList()
+        self.title = "My Deliveries"
+        tableView.delegate = self
+        tableView.dataSource = self
         
         //Printing the data array
         for deliveryObj in deliveryListArray {
@@ -121,7 +125,6 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
     func renderAlltheMarkers()
     {
         getCamera()
-        
         
         aMapView?.delegate = self
         
@@ -219,7 +222,7 @@ class MapViewController: UIViewController, UITableViewDelegate, GMSMapViewDelega
         return deliveryList.count
     }
     
-    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"customCell", for: indexPath ) as! CustomTableViewCell
 //        deliveryList = fetchDeliveryList()
         let delivery = deliveryList[indexPath.row]

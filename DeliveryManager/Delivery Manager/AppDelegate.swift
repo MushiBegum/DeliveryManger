@@ -38,6 +38,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        let appconID = UserDefaults.standard.string(forKey: "applicationConnectionID")
+        
+        if (appconID != nil )
+        {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let aPasscodeViewController: PinCodeViewController = mainStoryboard.instantiateViewController(withIdentifier: "PinCodeViewController") as! PinCodeViewController
+            
+            self.window?.rootViewController = aPasscodeViewController
+            
+            self.window?.makeKeyAndVisible()
+        }
+        else
+        {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController: ViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! ViewController
+            
+            self.window?.rootViewController = viewController
+            
+            self.window?.makeKeyAndVisible()
+        }
+
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

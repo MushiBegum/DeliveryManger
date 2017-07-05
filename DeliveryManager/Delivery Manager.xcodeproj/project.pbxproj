@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F03D63E1F0270BF005F63D1 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F03D63D1F0270BF005F63D1 /* Login.json */; };
-		1F3C9C1C1F06BC0200B0543B /* OrderList.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9C1B1F06BC0200B0543B /* OrderList.json */; };
-		1F3C9C1E1F06BC0800B0543B /* Product.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9C1D1F06BC0800B0543B /* Product.json */; };
-		1F3C9C201F06BC0D00B0543B /* 9a5bf6a7970b7957450cb0b69a6019a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C9C1F1F06BC0D00B0543B /* 9a5bf6a7970b7957450cb0b69a6019a1.png */; };
 		1F5241501EFFAEAE006C1FFB /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */; };
 		1F79EF3A1F03DD89004A2F05 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EF391F03DD89004A2F05 /* CustomTableViewCell.swift */; };
 		1F79EF3C1F03ED63004A2F05 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */; };
@@ -27,9 +24,6 @@
 
 /* Begin PBXFileReference section */
 		1F03D63D1F0270BF005F63D1 /* Login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
-		1F3C9C1B1F06BC0200B0543B /* OrderList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = OrderList.json; path = ../../../../Downloads/OrderList.json; sourceTree = "<group>"; };
-		1F3C9C1D1F06BC0800B0543B /* Product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Product.json; path = ../../../../Downloads/Product.json; sourceTree = "<group>"; };
-		1F3C9C1F1F06BC0D00B0543B /* 9a5bf6a7970b7957450cb0b69a6019a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9a5bf6a7970b7957450cb0b69a6019a1.png; path = ../../../../Downloads/9a5bf6a7970b7957450cb0b69a6019a1.png; sourceTree = "<group>"; };
 		1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		1F79EF391F03DD89004A2F05 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +96,6 @@
 				662B7AD91F052C190052219C /* DeliveryList.json */,
 				1F80D85F1F03AE600043DCF8 /* DeliveryManagerObject.swift */,
 				662B7ADB1F052C590052219C /* LoginModel.swift */,
-				1F3C9C1B1F06BC0200B0543B /* OrderList.json */,
-				1F3C9C1D1F06BC0800B0543B /* Product.json */,
-				1F3C9C1F1F06BC0D00B0543B /* 9a5bf6a7970b7957450cb0b69a6019a1.png */,
 			);
 			path = "Delivery Manager";
 			sourceTree = "<group>";
@@ -180,12 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3C9C1C1F06BC0200B0543B /* OrderList.json in Resources */,
 				1FFF75271EFF7FC5009FEDF6 /* LaunchScreen.storyboard in Resources */,
 				1FFF75241EFF7FC5009FEDF6 /* Assets.xcassets in Resources */,
 				1FFF75221EFF7FC5009FEDF6 /* Main.storyboard in Resources */,
-				1F3C9C201F06BC0D00B0543B /* 9a5bf6a7970b7957450cb0b69a6019a1.png in Resources */,
-				1F3C9C1E1F06BC0800B0543B /* Product.json in Resources */,
 				662B7ADA1F052C190052219C /* DeliveryList.json in Resources */,
 				1F03D63E1F0270BF005F63D1 /* Login.json in Resources */,
 			);
