@@ -1,0 +1,21 @@
+{
+    "d" : {
+        "results" : [
+                     {
+                     "Posnr" : "000010",
+                     "IvVbeln" : "80000022",
+                     "Arktx" : "Vodka Cruiser",
+                     "Pikmg" : "0.000",
+                     "Material” : "SOLOLEMON_24",
+                     "Lfimg" : "1.000",
+                     "Netpr" : "12.000",
+                     "__metadata" : {
+                     "id" : "https:\/\/hcpms-p13275173trial.hanatrial.ondemand.com\/com.deloitte.pod\/ZGWP_SERVICE1_SRV\/DeliveyItemDetailSet('80000022')",
+                     "uri" : "https:\/\/hcpms-p13275173trial.hanatrial.ondemand.com\/com.deloitte.pod\/ZGWP_SERVICE1_SRV\/DeliveyItemDetailSet('80000022')",
+                     "type" : "ZGWP_SERVICE1_SRV.DeliveyItemDetail"
+                     },
+                     "Vbeln" : "80000022"
+                     }
+                     ]
+    }
+}

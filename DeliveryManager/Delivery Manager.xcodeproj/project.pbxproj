@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F03D63E1F0270BF005F63D1 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F03D63D1F0270BF005F63D1 /* Login.json */; };
+		1F0EC3761F0F5927001ECA91 /* OrderList.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F0EC3751F0F5927001ECA91 /* OrderList.json */; };
 		1F5241501EFFAEAE006C1FFB /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */; };
 		1F79EF3A1F03DD89004A2F05 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EF391F03DD89004A2F05 /* CustomTableViewCell.swift */; };
 		1F79EF3C1F03ED63004A2F05 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1F03D63D1F0270BF005F63D1 /* Login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
+		1F0EC3751F0F5927001ECA91 /* OrderList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrderList.json; sourceTree = "<group>"; };
 		1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		1F79EF391F03DD89004A2F05 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				1FFF75281EFF7FC5009FEDF6 /* Info.plist */,
 				1F03D63D1F0270BF005F63D1 /* Login.json */,
 				662B7AD91F052C190052219C /* DeliveryList.json */,
+				1F0EC3751F0F5927001ECA91 /* OrderList.json */,
 				1F80D85F1F03AE600043DCF8 /* DeliveryManagerObject.swift */,
 				662B7ADB1F052C590052219C /* LoginModel.swift */,
 				66857DB31F0CE6A000C077CC /* OrderListViewController.swift */,
@@ -174,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0EC3761F0F5927001ECA91 /* OrderList.json in Resources */,
 				1FFF75271EFF7FC5009FEDF6 /* LaunchScreen.storyboard in Resources */,
 				1FFF75241EFF7FC5009FEDF6 /* Assets.xcassets in Resources */,
 				1FFF75221EFF7FC5009FEDF6 /* Main.storyboard in Resources */,

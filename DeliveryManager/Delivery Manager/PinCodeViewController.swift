@@ -48,6 +48,7 @@ class PinCodeViewController: UIViewController{
         
         if passcodeString.count == 4 {
             let passcode = getPasscode()
+            print(passcode)
             if passcode.characters.count == 0 || passcode == String(passcodeString) {
                 savePasscodeToUserDefault(value: String(passcodeString))
                 

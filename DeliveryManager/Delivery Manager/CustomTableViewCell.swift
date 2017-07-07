@@ -13,6 +13,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var CustomerName: UILabel!
     @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var DeliveryDate: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
