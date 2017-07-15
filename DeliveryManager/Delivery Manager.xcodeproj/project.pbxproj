@@ -66,6 +66,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F5312B61F1782EA007A8297 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1FFF751E1EFF7FC5009FEDF6 /* ViewController.swift */,
+				1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */,
+				1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */,
+				66857DB31F0CE6A000C077CC /* OrderListViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		1FFF75101EFF7FC5009FEDF6 = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +98,8 @@
 		1FFF751B1EFF7FC5009FEDF6 /* Delivery Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1F5312B61F1782EA007A8297 /* ViewController */,
 				1FFF751C1EFF7FC5009FEDF6 /* AppDelegate.swift */,
-				1FFF751E1EFF7FC5009FEDF6 /* ViewController.swift */,
-				1F52414F1EFFAEAE006C1FFB /* PinCodeViewController.swift */,
-				1F79EF3B1F03ED63004A2F05 /* MapViewController.swift */,
 				1F79EF391F03DD89004A2F05 /* CustomTableViewCell.swift */,
 				1FFF75201EFF7FC5009FEDF6 /* Main.storyboard */,
 				1FFF75231EFF7FC5009FEDF6 /* Assets.xcassets */,
@@ -101,7 +110,6 @@
 				1F0EC3751F0F5927001ECA91 /* OrderList.json */,
 				1F80D85F1F03AE600043DCF8 /* DeliveryManagerObject.swift */,
 				662B7ADB1F052C590052219C /* LoginModel.swift */,
-				66857DB31F0CE6A000C077CC /* OrderListViewController.swift */,
 			);
 			path = "Delivery Manager";
 			sourceTree = "<group>";
