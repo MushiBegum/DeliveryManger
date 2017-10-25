@@ -667,7 +667,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3374.6705710102488" y="91.9921875"/>
+            <point key="canvasLocation" x="4078" y="91"/>
         </scene>
         <!--Order List View Controller-->
         <scene sceneID="AX8-0J-6IM">
@@ -759,7 +759,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="Df4-Pm-CEb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Proto" rowHeight="110" id="Df4-Pm-CEb">
                                         <rect key="frame" x="0.0" y="28" width="1024" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Df4-Pm-CEb" id="iE9-Uu-Gov">
